@@ -34,28 +34,28 @@ const COLOURS = {
   // light_orange: "#FA9C1B",
 
   // notif_red: "#A62C2B",
-  // danger_red: "#D22B2B",
+  danger_red: "#D22B2B",
   // green: "#33b249",
 
   // placeholder_grey: "#777777",
 };
 
-// const FONT = {
-//   // regular: "OswaldRegular",
-//   // medium: "OswaldMedium",
-//   // semibold: "OswaldSemiBold",
-//   // bold: "OswaldBold",
-//   regular: "AsapRegular",
-//   medium: "AsapMedium",
-//   semibold: "AsapSemiBold",
-//   bold: "AsapBold",
-//   italicRegular: "AsapItalicRegular",
-//   italicMedium: "AsapItalicMedium",
-//   quicksandBold: "QuicksandBold",
-//   quicksandRegular: "QuicksandRegular",
-//   verdana: "VerdanaRegular",
-//   verdanaBold: "VerdanaBold",
-// };
+const FONT = {
+  //   // regular: "OswaldRegular",
+  //   // medium: "OswaldMedium",
+  //   // semibold: "OswaldSemiBold",
+  //   // bold: "OswaldBold",
+  //   regular: "AsapRegular",
+  //   medium: "AsapMedium",
+  //   semibold: "AsapSemiBold",
+  //   bold: "AsapBold",
+  //   italicRegular: "AsapItalicRegular",
+  //   italicMedium: "AsapItalicMedium",
+  //   quicksandBold: "QuicksandBold",
+  //   quicksandRegular: "QuicksandRegular",
+  //   verdana: "VerdanaRegular",
+  //   verdanaBold: "VerdanaBold",
+};
 
 const SIZES = {
   xxxSmall: 3,
@@ -69,4 +69,4 @@ const SIZES = {
   xxxLarge: 40,
 };
 
-export { COLOURS, SIZES };
+export { COLOURS, FONT, SIZES };

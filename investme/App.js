@@ -1,41 +1,31 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, ToastAndroid, TouchableOpacity, View } from "react-native";
-import { COLOURS } from "./constants/theme";
+import { StyleSheet, SafeAreaView, Platform, StatusBar, View } from "react-native";
+import { SignInScreen } from "./components";
+import { COLOURS, SIZES } from "./constants";
+import * as NavigationBar from "expo-navigation-bar";
+import * as Device from "expo-device";
 
 export default function App() {
+  // Set the navigation bar to be the same colour
+  Device.osName == "Android" && NavigationBar.setBackgroundColorAsync(COLOURS.bg_normal);
 
   return (
-    <View style={{ flex: 1 }}>
-      <StatusBar style="light" />
-      <View style={styles.container}>
-        <Text style={{ color: COLOURS.white }}>Open up App.js to start working on your app!!</Text>
-        <Text style={{ color: COLOURS.grey }}>Open up App.js to start working on your app!!</Text>
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar backgroundColor={COLOURS.bg_normal} barStyle={"light-content"} />
+      <View style={styles.insideView}>
+        {/* <SignInScreen /> */}
+        <View></View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: COLOURS.bg_normal,
-    alignItems: "center",
-    justifyContent: "center",
   },
-  button: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: "black",
-  },
-  text: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: "bold",
-    letterSpacing: 0.25,
-    color: "white",
+  insideView: {
+    flex: 1,
+    paddingHorizontal: SIZES.medium,
   },
 });
